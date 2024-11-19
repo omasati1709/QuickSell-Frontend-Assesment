@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { TiThList } from "react-icons/ti";
 import "./NavBar.css";
 import { useSelector, useDispatch } from "react-redux";
 import { selectData } from "../../Actions/DataAction";
@@ -58,15 +59,8 @@ const NavBar = () => {
           className="p-10 f-16 btn"
           onClick={() => setDisplayOnClick(!displayOnClick)}
         >
-          <img
-            src="/icons/display.svg"
-            alt="Display Icon"
-            style={{ width: "20px", height: "20px", marginRight: "8px" }}
-          /> Display <img
-            src="/icons/down.svg"
-            alt="Down Icon"
-            style={{ width: "20px", height: "20px", marginRight: "8px" }}
-          />
+          {" "}
+          <TiThList /> Display
         </button>
         {displayOnClick && (
           <>
@@ -79,7 +73,6 @@ const NavBar = () => {
                   className="selectStyle"
                   name="group"
                   id="group"
-
                 >
                   <option value="status">Status</option>
                   <option value="user">User</option>
